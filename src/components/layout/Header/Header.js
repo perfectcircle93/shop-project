@@ -1,37 +1,57 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
+
+import { connect } from 'react-redux';
+import { countItems } from '../../../redux/cartRedux.js';
 
 import styles from './Header.module.scss';
 
-const Component = ({className, children}) => (
+const Component = ({ className, cartItems }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Header</h2>
-    {children}
+    <Grid
+      container
+      spacing={0}
+      alignItems="center"
+      className={styles.container}
+    >
+      <Grid item xs></Grid>
+      <Grid item container justify="center" xs={6}>
+        <Link variant="h6" component={RouterLink} to="/" underline="none">
+          Shop-project
+        </Link>
+      </Grid>
+      <Grid item container justify="flex-end" xs alignItems="flex-end">
+        <Button>Cart({cartItems})</Button>
+      </Grid>
+    </Grid>
   </div>
 );
 
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  cartItems: PropTypes.number,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = (state) => ({
+  cartItems: countItems(state),
+});
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
-  Component as Header,
-  // Container as Header,
+  //Component as Header,
+  Container as Header,
   Component as HeaderComponent,
 };

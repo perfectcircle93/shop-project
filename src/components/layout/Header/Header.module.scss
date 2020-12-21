@@ -1,4 +1,11 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    margin: 0 40px;
+    border-bottom: $border;
+    height: 60px;
+  }
+  
+  .container {
+    height: 100%;
+  }
