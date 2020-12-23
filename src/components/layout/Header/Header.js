@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import { PageNav } from '../PageNav/PageNav';
 import clsx from 'clsx';
 
 import Grid from '@material-ui/core/Grid';
@@ -21,10 +21,12 @@ const Component = ({ className, cartItems }) => (
       alignItems="center"
       className={styles.container}
     >
-      <Grid item xs></Grid>
+      <Grid item xs>
+        <PageNav></PageNav>
+      </Grid>
       <Grid item container justify="center" xs={6}>
         <Link variant="h6" component={RouterLink} to="/" underline="none">
-          Shop-project
+          Food Travelers
         </Link>
       </Grid>
       <Grid item container justify="flex-end" xs alignItems="flex-end">

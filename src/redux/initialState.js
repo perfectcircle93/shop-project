@@ -9,4 +9,7 @@ export const initialState = {
   cart: {
     products: [],
   },
+
+  categories: ['asian', 'italian', 'polish', 'usa'],
+
 };

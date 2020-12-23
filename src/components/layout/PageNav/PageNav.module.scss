@@ -1,0 +1,37 @@
+@import '../../../styles/settings.scss';
+
+// .root {
+// }
+
+.drawer {
+  width: 230px;
+  padding: 30px 40px;
+}
+
+.listSubheader {
+  font-size: calc(0.75 * #{$base-size});
+  color: $secondary;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.listItem {
+  padding: 0;
+}
+
+.listItemText {
+  text-transform: uppercase;
+  font-family: $text-header;
+  font-size: $base-size;
+}
+
+.smallItem {
+  padding: 0;
+  .listItemText {
+    text-transform: uppercase;
+    font-family: $text-header;
+    font-size: $base-size;
+    font-size: calc(0.75 * #{$base-size});
+    color: $secondary;
+  }
+}
