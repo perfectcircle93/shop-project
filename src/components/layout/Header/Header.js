@@ -21,15 +21,15 @@ const Component = ({ className, cartItems }) => (
       alignItems="center"
       className={styles.container}
     >
-      <Grid item xs>
+      <Grid item xs={9} md>
         <PageNav></PageNav>
       </Grid>
-      <Grid item container justify="center" xs={6}>
+      <Grid item container justify="center" xs={12} md={6}>
         <Link variant="h6" component={RouterLink} to="/" underline="none">
           Food Travelers
         </Link>
       </Grid>
-      <Grid item container justify="flex-end" xs alignItems="flex-end">
+      <Grid item container justify="flex-end" xs={3} alignItems="flex-end">
         <Button>Cart({cartItems})</Button>
       </Grid>
     </Grid>
