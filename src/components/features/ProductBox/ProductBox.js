@@ -12,10 +12,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
-const Component = ({ className, children, photo, name, _id, price }) => (
+const Component = ({ className, children, photos, name, _id, price }) => (
   <Card square elevation={0}>
     <CardActionArea component={Link} to={`/collections/products/${_id}`}>
-      <CardMedia className={styles.image} image={photo} title={name} />
+      <CardMedia className={styles.image} image={photos[0]} title={name} />
       <CardContent className={styles.description}>
         <Typography gutterBottom variant="subtitle1" component="p">
           {name}
@@ -31,7 +31,7 @@ const Component = ({ className, children, photo, name, _id, price }) => (
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  photo: PropTypes.string,
+  photos: PropTypes.array,
   name: PropTypes.string,
   _id: PropTypes.string,
   price: PropTypes.number,

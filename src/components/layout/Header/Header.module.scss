@@ -24,6 +24,11 @@
       order: 3;
     }
   }
+
+  .drawer {
+    width: 290px;
+    padding: 30px 60px;
+  }
   
   @media (max-width: 960px) {
     .container {

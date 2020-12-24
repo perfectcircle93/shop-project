@@ -84,6 +84,6 @@ export const initialState = {
     products: [],
   },
 
-  categories: ['asian', 'italian', 'polish', 'usa'],
+  categories: ['all', 'asian', 'italian', 'polish', 'usa'],
 
 };

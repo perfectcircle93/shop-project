@@ -26,7 +26,7 @@ const Component = ({ className, children }) => (
         </ListSubheader>
       }
     >
-      {['chinese', 'japanese', 'malaysian'].map((text) => (
+      {['all', 'chinese', 'japanese', 'malaysian'].map((text) => (
         <ListItem
           button
           key={text}
