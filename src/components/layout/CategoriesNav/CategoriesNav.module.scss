@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+// .root {
+
+// }
+
+.listSubheader {
+  font-size: calc(0.75 * #{$base-size});
+  color: $secondary;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.listItem {
+  padding: 0;
+}
+
+.listItemText {
+  text-transform: uppercase;
+  font-family: $text-header;
+  font-size: $base-size;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import { CategoriesNav } from '../CategoriesNav/CategoriesNav';
 import styles from './PageNav.module.scss';
 
 import Button from '@material-ui/core/Button';
@@ -11,6 +12,7 @@ import List from '@material-ui/core/List';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
@@ -38,34 +40,8 @@ const Component = ({ className, children }) => {
       </Button>
       <Drawer anchor="left" open={state} onClose={toggleDrawer(false)}>
         <div className={styles.drawer}>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            subheader={
-              <ListSubheader
-                component="div"
-                id="nested-list-subheader"
-                className={styles.listSubheader}
-              >
-                SHOP
-              </ListSubheader>
-            }
-          >
-            {['asian', 'italian', 'polish', 'usa'].map((text) => (
-              <ListItem
-                button
-                key={text}
-                className={styles.listItem}
-                component={NavLink}
-                to={`/collections/${text}`}
-              >
-                <ListItemText
-                  primary={text}
-                  classes={{ primary: styles.listItemText }}
-                />
-              </ListItem>
-            ))}
-          </List>
+
+          <CategoriesNav></CategoriesNav>
 
           <List
             component="nav"

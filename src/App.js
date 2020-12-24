@@ -13,7 +13,7 @@ import { store } from './redux/store';
 
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
-import { ProductsList } from './components/views/ProductsList/ProductsList';
+import { ShopPage } from './components/views/ShopPage/ShopPage';
 import { Product } from './components/views/Product/Product';
 import { NotFound } from './components/views/NotFound/NotFound';
 
@@ -49,8 +49,8 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path="/" component={Homepage} />
-              <Route exact path="/collections/all" component={ProductsList} />
-              <Route exact path="/collections/:name" component={ProductsList} />
+              <Route exact path="/collections/all" component={ShopPage} />
+              <Route exact path="/collections/:name" component={ShopPage} />
               <Route
                 exact
                 path="/collections/products/:name"
