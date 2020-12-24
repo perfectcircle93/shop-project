@@ -4,6 +4,7 @@ import { ProductsListComponent } from './ProductsList';
 
 const mockProps = {
   products: ['1', '2'],
+  match: { params: { id: 'as' } },
 };
 
 describe('Component ProductsList', () => {

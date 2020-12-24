@@ -20,7 +20,7 @@
 .listItemText {
   text-transform: capitalize;
   font-family: $text-header;
-  font-size: calc($base-size * 2);
+  font-size: calc(#{$base-size} * 2);
   font-weight: 700;
 }
 

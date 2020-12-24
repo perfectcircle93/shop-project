@@ -1,18 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import clsx from 'clsx';
-
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
 import styles from './MainLayout.module.scss';
 import { Header } from '../Header/Header';
+import { CategoriesNav } from '../../layout/CategoriesNav/CategoriesNav';
+
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Box from '@material-ui/core/Box';
+
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <Header></Header>
-    {children}
+    <Grid container className={styles.container} spacing={5}>
+      <Grid item xs={12} md={9}>
+        {children}
+      </Grid>
+      <Hidden smDown>
+        <Grid item md>
+          <Box className={styles.sideNav}>
+            <CategoriesNav></CategoriesNav>
+          </Box>
+        </Grid>
+      </Hidden>
+    </Grid>
   </div>
 );
 

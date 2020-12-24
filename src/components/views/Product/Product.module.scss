@@ -1,4 +1,36 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    width: 100%;
+  }
+  
+  .container {
+    min-height: 70vh;
+  }
+  
+  .photo {
+    position: relative;
+  
+    a {
+      display: block;
+    }
+  
+    img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+    }
+  }
+  
+  .header {
+    position: absolute;
+    top: 40%;
+    left: -110px;
+    width: 250px;
+  }
+  
+  @media (max-width: 960px) {
+    .header {
+      position: static;
+    }
+  }

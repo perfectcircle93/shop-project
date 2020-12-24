@@ -1,6 +1,11 @@
 /* selectors */
 export const getAll = ({ products }) => products.data;
 
+export const getById = ({ products }, id) => {
+  const filtered = products.data.filter((product) => product._id === id);
+  return filtered.length ? filtered[0] : { error: true };
+};
+
 /* action name creator */
 const reducerName = 'products';
 const createActionName = (name) => `app/${reducerName}/${name}`;
