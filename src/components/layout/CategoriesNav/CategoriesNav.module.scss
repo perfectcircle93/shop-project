@@ -1,13 +1,15 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-
-// }
+.root {
+    border-left: $border;
+    position: fixed;
+    padding-left: 40px;
+    height: 80vh;
+  }
 
 .listSubheader {
   font-size: calc(0.75 * #{$base-size});
   color: $secondary;
-  margin-top: 20px;
   padding: 0;
 }
 
@@ -16,7 +18,12 @@
 }
 
 .listItemText {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: $text-header;
-  font-size: $base-size;
+  font-size: calc($base-size * 2);
+  font-weight: 700;
+}
+
+.active {
+  color: $gray;
 }

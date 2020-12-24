@@ -1,12 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import clsx from 'clsx';
-
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
 import styles from './CategoriesNav.module.scss';
 
 import List from '@material-ui/core/List';
@@ -29,13 +26,14 @@ const Component = ({ className, children }) => (
         </ListSubheader>
       }
     >
-      {['asian', 'italian', 'polish', 'usa'].map((text) => (
+      {['chinese', 'japanese', 'malaysian'].map((text) => (
         <ListItem
           button
           key={text}
           className={styles.listItem}
           component={NavLink}
           to={`/collections/${text}`}
+          activeClassName={styles.active}
         >
           <ListItemText
             primary={text}

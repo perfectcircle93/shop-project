@@ -15,11 +15,11 @@ import Box from '@material-ui/core/Box';
 import { ProductsList } from '../ProductsList/ProductsList';
 import { CategoriesNav } from '../../layout/CategoriesNav/CategoriesNav';
 
-const Component = ({ className, children }) => (
+const Component = ({ className, children, match }) => (
   <div className={clsx(className, styles.root)}>
-    <Grid container spacing={0} className={styles.container}>
+    <Grid container spacing={5} className={styles.container}>
       <Grid item xs={12} md={9}>
-        <ProductsList></ProductsList>
+        <ProductsList category={match.params.name}></ProductsList>
       </Grid>
       <Hidden smDown>
         <Grid item md>
@@ -35,6 +35,7 @@ const Component = ({ className, children }) => (
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  match: PropTypes.object,
 };
 
 // const mapStateToProps = state => ({

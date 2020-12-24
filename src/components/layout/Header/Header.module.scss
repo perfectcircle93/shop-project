@@ -1,13 +1,19 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    margin: 0 40px;
-    border-bottom: $border;
     min-height: 60px;
+  }
+
+  .toolbar {
+    padding: 0;
+    background-color: #fff;
   }
   
   .container {
+    margin: 0 40px;
+    border-bottom: $border;
     min-height: 60px;
+    
     div:nth-child(1) {
       order: 1;
     }

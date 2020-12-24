@@ -49,11 +49,10 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path="/" component={Homepage} />
-              <Route exact path="/collections/all" component={ShopPage} />
               <Route exact path="/collections/:name" component={ShopPage} />
               <Route
                 exact
-                path="/collections/products/:name"
+                path="/collections/products/:id"
                 component={Product}
               />
               <Route path="*" component={NotFound} />
