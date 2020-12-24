@@ -4,10 +4,6 @@
     width: 100%;
   }
   
-  .container {
-    min-height: 70vh;
-  }
-  
   .photo {
     position: relative;
   
@@ -17,17 +13,46 @@
   
     img {
       width: 100%;
-      height: 550px;
+      height: 400px;
       object-fit: cover;
     }
+  }
+
+  .gridList {
+    width: 100%;
+    height: 200px;
   }
   
   .header {
     position: absolute;
     top: 40%;
-    left: -110px;
+    left: -60px;
     width: 250px;
   }
+
+  .description {
+    padding-left: 20px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .text {
+      color: $gray;
+    }
+  }
+  
+  .amount {
+    .amount_buttons {
+      display: flex;
+      align-items: center;
+  
+      & > * {
+        margin: 0 3px;
+      }
+    }
+  }
+  
   
   @media (max-width: 960px) {
     .header {
