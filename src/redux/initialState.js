@@ -8,7 +8,7 @@ export const initialState = {
         price: 20,
         isDiscount: true,
         discount: 15,
-        photo: 'https://images.pexels.com/photos/3876122/pexels-photo-3876122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        photos: ['https://images.pexels.com/photos/3876122/pexels-photo-3876122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
@@ -20,7 +20,7 @@ export const initialState = {
         price: 20,
         isDiscount: true,
         discount: 15,
-        photo: 'https://images.pexels.com/photos/5409009/pexels-photo-5409009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        photos: ['https://images.pexels.com/photos/5409009/pexels-photo-5409009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
@@ -32,7 +32,7 @@ export const initialState = {
         price: 20,
         isDiscount: false,
         //discount: 15,
-        photo: 'https://images.pexels.com/photos/1854665/pexels-photo-1854665.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        photos: ['https://images.pexels.com/photos/1854665/pexels-photo-1854665.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
@@ -44,7 +44,7 @@ export const initialState = {
         price: 20,
         isDiscount: true,
         discount: 15,
-        photo: 'https://images.pexels.com/photos/4224206/pexels-photo-4224206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        photos: ['https://images.pexels.com/photos/4224206/pexels-photo-4224206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
@@ -56,7 +56,7 @@ export const initialState = {
         price: 20,
         isDiscount: true,
         discount: 15,
-        photo: 'https://images.pexels.com/photos/4552045/pexels-photo-4552045.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+        photos: ['https://images.pexels.com/photos/4552045/pexels-photo-4552045.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
@@ -68,7 +68,7 @@ export const initialState = {
         price: 20,
         isDiscount: false,
         //discount: 15,
-        photo: 'https://images.pexels.com/photos/4013108/pexels-photo-4013108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        photos: ['https://images.pexels.com/photos/4013108/pexels-photo-4013108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'],
         description:
         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
         height: 12,
