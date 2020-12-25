@@ -1,0 +1,32 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  margin-top: 40px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listTitle {
+  text-transform: uppercase;
+}
+
+.listItemText {
+  display: block;
+  font-family: $text-header;
+  font-size: $base-size;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .listItemText {
+    margin: 0 5px;
+  }
+}

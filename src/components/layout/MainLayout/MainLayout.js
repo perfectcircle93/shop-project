@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import styles from './MainLayout.module.scss';
 import { Header } from '../Header/Header';
 import { CategoriesNav } from '../../layout/CategoriesNav/CategoriesNav';
+import { Footer } from '../../layout/Footer/Footer';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -18,9 +19,10 @@ const Component = ({className, children}) => (
     <Grid container className={styles.container} spacing={5}>
       <Grid item xs={12} lg={9}>
         {children}
+        <Footer></Footer>
       </Grid>
-      <Hidden mdDown>
-        <Grid item lg>
+      <Hidden smDown>
+        <Grid item md>
           <Box className={styles.sideNav}>
             <CategoriesNav></CategoriesNav>
           </Box>
