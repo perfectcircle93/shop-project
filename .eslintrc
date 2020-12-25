@@ -34,7 +34,8 @@
       ],
       "linebreak-style": [
         "error",
-        "unix"
+        "unix",
+        "lf"
       ],
       "quotes": [
         "error",
