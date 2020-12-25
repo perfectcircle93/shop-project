@@ -1,4 +1,55 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .products {
+    min-width: 100%;
+    overflow-y: auto;
+    height: 75%;
+  }
+  
+  .product {
+    width: 100%;
+  }
+  
+  .photo {
+    width: 100%;
+  
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+  
+  .amount {
+    .amount_buttons {
+      display: flex;
+      align-items: center;
+  
+      & > * {
+        margin: 0 3px;
+      }
+    }
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    margin-top: 10px;
+  }
+  
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+  }

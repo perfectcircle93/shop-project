@@ -9,6 +9,7 @@ import { Homepage } from './components/views/Homepage/Homepage';
 import { ProductsList } from './components/views/ProductsList/ProductsList';
 import { Product } from './components/views/Product/Product';
 import { NotFound } from './components/views/NotFound/NotFound';
+import { CartPage } from './components/views/CartPage/CartPage';
 
 const theme = createMuiTheme({
   palette: {
@@ -21,6 +22,9 @@ const theme = createMuiTheme({
     h3: {
       fontWeight: 700,
       lineHeight: 1.25,
+    },
+    h4: {
+      fontWeight: 700,
     },
     h6: {
       fontWeight: 700,
@@ -62,6 +66,7 @@ const App = () => (
                 path="/collections/products/:id"
                 component={Product}
               />
+              <Route exact path="/cart" component={CartPage} />
               <Route path="*" component={NotFound} />
             </Switch>
           </MainLayout>

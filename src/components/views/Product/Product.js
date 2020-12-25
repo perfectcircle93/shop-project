@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { connect } from 'react-redux';
 import { getById } from '../../../redux/productsRedux.js';
 import styles from './Product.module.scss';
+import { addProduct } from '../../../redux/cartRedux.js';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -15,18 +16,21 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import IconButton from '@material-ui/core/IconButton';
 
 
-const Component = ({ className, children, name, photos, price, description, height }) => {
+const Component = ({ className, children, name, photos, price, description, height, _id, addProductToCart }) => {
   const [amount, setAmount] = React.useState(1);
+  const addToCart = (amount) =>
+    addProductToCart({
+      _id: _id,
+      amount: amount,
+      name: name,
+      photos: photos,
+      price: price,
+    });
   return (
     <div className={clsx(className, styles.root)}>
       <Grid container justify="flex-end" spacing={6}>
         <Grid item xs={12} md={5} className={styles.photo}>
           <img src={photos[0]} alt={name}></img>
-          <div className={styles.header}>
-            <Typography variant="h3" gutterBottom={true}>
-              {name}
-            </Typography>
-          </div>
           <GridList cellHeight={140} className={styles.gridList} cols={3}>
             {photos.map((tile) => (
               <GridListTile key={tile} cols={1}>
@@ -34,6 +38,11 @@ const Component = ({ className, children, name, photos, price, description, heig
               </GridListTile>
             ))}
           </GridList>
+          <div className={styles.header}>
+            <Typography variant="h3" gutterBottom={true}>
+              {name}
+            </Typography>
+          </div>
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={styles.description}>
@@ -75,7 +84,7 @@ const Component = ({ className, children, name, photos, price, description, heig
                 </IconButton>
               </div>
             </div>
-            <Button>Add to cart</Button>
+            <Button onClick={() => addToCart(amount)}>Add to cart</Button>
           </div>
         </Grid>
       </Grid>
@@ -91,6 +100,8 @@ Component.propTypes = {
   photos: PropTypes.array,
   price: PropTypes.number,
   height: PropTypes.number,
+  _id: PropTypes.string,
+  addProductToCart: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => {
@@ -99,10 +110,12 @@ const mapStateToProps = (state, props) => {
     ...product,
   };
 };
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-const Container = connect(mapStateToProps)(Component);
+
+const mapDispatchToProps = (dispatch) => ({
+  addProductToCart: (arg) => dispatch(addProduct(arg)),
+});
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   //Component as Product,
